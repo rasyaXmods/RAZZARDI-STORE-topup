@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[NAMA_BRAND] - Top Up Game Tercepat & Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#3B82F6', // Aksen Utama
+                            600: '#2563EB',
+                        },
+                        dark: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tabular numbers untuk harga agar rapi sejajar */
+        .tabular-nums { font-variant-numeric: tabular-nums; }
+        /* Menghilangkan scrollbar bawaan */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-200 font-sans antialiased pb-24 md:pb-0">
 
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center font-display font-bold text-white text-xl">R</div>
+                <span class="font-display text-xl font-bold tracking-wide text-white">[NAMA_BRAND]</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="text-sm font-medium hover:text-brand-500 transition">Cek Pesanan</button>
+                <button class="bg-dark-800 border border-slate-700 hover:border-brand-500 px-4 py-2 rounded-lg text-sm font-medium transition min-h-[44px]">Masuk</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 py-6">
+        
+        <!-- PENCARIAN & BANNER -->
+        <div class="mb-8">
+            <div class="relative">
+                <input type="text" placeholder="Cari game atau voucher..." class="w-full bg-dark-800 border border-slate-700 rounded-xl px-5 py-4 pl-12 text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition min-h-[44px]">
+                <svg class="w-5 h-5 absolute left-4 top-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </div>
+
+        <!-- GRID GAME POPULER -->
+        <div class="flex justify-between items-end mb-4">
+            <h2 class="font-display text-2xl font-semibold text-white">Game Populer</h2>
+            <a href="#" class="text-sm text-brand-500 hover:underline">Lihat Semua</a>
+        </div>
+        
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 mb-12">
+            <!-- Game Card 1 -->
+            <a href="#" class="group relative bg-dark-800 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-500 transition-all duration-300 block">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://placehold.co/300x400/1E293B/FFF?text=Mobile+Legends" alt="Mobile Legends" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-2 text-center bg-dark-900 absolute bottom-0 w-full">
+                    <span class="text-xs font-medium text-slate-200 truncate block">Mobile Legends</span>
+                </div>
+            </a>
+            <!-- Game Card 2 -->
+            <a href="#" class="group relative bg-dark-800 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-500 transition-all duration-300 block">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://placehold.co/300x400/1E293B/FFF?text=Free+Fire" alt="Free Fire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-2 text-center bg-dark-900 absolute bottom-0 w-full">
+                    <span class="text-xs font-medium text-slate-200 truncate block">Free Fire</span>
+                </div>
+            </a>
+            <!-- Game Card 3 -->
+            <a href="#" class="group relative bg-dark-800 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-500 transition-all duration-300 block">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://placehold.co/300x400/1E293B/FFF?text=Genshin+Impact" alt="Genshin Impact" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-2 text-center bg-dark-900 absolute bottom-0 w-full">
+                    <span class="text-xs font-medium text-slate-200 truncate block">Genshin Impact</span>
+                </div>
+            </a>
+            <!-- Game Card 4 -->
+            <a href="#" class="group relative bg-dark-800 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-500 transition-all duration-300 block">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="https://placehold.co/300x400/1E293B/FFF?text=PUBG+Mobile" alt="PUBG Mobile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-2 text-center bg-dark-900 absolute bottom-0 w-full">
+                    <span class="text-xs font-medium text-slate-200 truncate block">PUBG Mobile</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- MOCKUP HALAMAN CHECKOUT (Alur Pelanggan) -->
+        <div class="bg-dark-800 border border-slate-700 rounded-2xl p-4 md:p-6 max-w-2xl mx-auto shadow-2xl">
+            <h3 class="font-display text-xl font-semibold text-white mb-6 border-b border-slate-700 pb-4">Detail Pesanan: Mobile Legends</h3>
+            
+            <!-- Step 1: Input Akun -->
+            <div class="mb-8">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-brand-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">1</span>
+                    <h4 class="text-white font-medium">Masukkan Data Akun</h4>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1">User ID</label>
+                        <input type="text" placeholder="Contoh: 12345678" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 transition min-h-[44px] tabular-nums">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1">Zone ID</label>
+                        <input type="text" placeholder="Contoh: 1234" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 transition min-h-[44px] tabular-nums">
+                    </div>
+                </div>
+                <!-- Pesan Error Spesifik (Sesuai Aturan 12) -->
+                <p class="text-red-400 text-xs mt-2 hidden" id="error-nickname">ID tidak ditemukan, periksa kembali User ID dan Zone ID Anda.</p>
+            </div>
+
+            <!-- Step 2: Pilih Nominal -->
+            <div class="mb-8">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-brand-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">2</span>
+                    <h4 class="text-white font-medium">Pilih Nominal</h4>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <!-- Nominal Card Selected -->
+                    <div class="border-2 border-brand-500 bg-brand-500/10 rounded-xl p-3 cursor-pointer relative">
+                        <div class="text-xs text-brand-500 font-semibold mb-1">Tersedia</div>
+                        <div class="text-sm text-white font-medium mb-1">86 Diamonds</div>
+                        <div class="text-lg font-bold text-white tabular-nums">Rp 22.000</div>
+                    </div>
+                    <!-- Nominal Card Default -->
+                    <div class="border border-slate-700 hover:border-slate-500 bg-dark-900 rounded-xl p-3 cursor-pointer transition">
+                        <div class="text-xs text-slate-400 font-semibold mb-1">Hemat 5%</div>
+                        <div class="text-sm text-white font-medium mb-1">172 Diamonds</div>
+                        <div class="text-lg font-bold text-white tabular-nums">Rp 43.000</div>
+                    </div>
+                    <!-- Nominal Card Default -->
+                    <div class="border border-slate-700 hover:border-slate-500 bg-dark-900 rounded-xl p-3 cursor-pointer transition">
+                        <div class="text-xs text-slate-400 font-semibold mb-1">Terlaris</div>
+                        <div class="text-sm text-white font-medium mb-1">257 Diamonds</div>
+                        <div class="text-lg font-bold text-white tabular-nums">Rp 64.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Metode Pembayaran -->
+            <div class="mb-6">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-brand-500 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">3</span>
+                    <h4 class="text-white font-medium">Metode Pembayaran</h4>
+                </div>
+                <div class="space-y-2">
+                    <label class="flex items-center justify-between p-3 border border-slate-700 rounded-lg cursor-pointer hover:bg-dark-900 transition">
+                        <div class="flex items-center gap-3">
+                            <input type="radio" name="payment" class="text-brand-500 focus:ring-brand-500 bg-dark-900 border-slate-700 w-4 h-4">
+                            <span class="text-sm text-white">QRIS (Semua E-Wallet)</span>
+                        </div>
+                        <span class="text-xs text-green-400 font-medium">Otomatis</span>
+                    </label>
+                    <label class="flex items-center justify-between p-3 border border-slate-700 rounded-lg cursor-pointer hover:bg-dark-900 transition">
+                        <div class="flex items-center gap-3">
+                            <input type="radio" name="payment" class="text-brand-500 focus:ring-brand-500 bg-dark-900 border-slate-700 w-4 h-4">
+                            <span class="text-sm text-white">Virtual Account BCA</span>
+                        </div>
+                        <span class="text-xs text-slate-400">Cek Manual</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Syarat & Ketentuan Checkbox -->
+            <label class="flex items-start gap-3 mb-6 cursor-pointer">
+                <input type="checkbox" class="mt-1 w-4 h-4 text-brand-500 bg-dark-900 border-slate-700 rounded focus:ring-brand-500">
+                <span class="text-xs text-slate-400">Saya menyetujui <a href="#" class="text-brand-500 hover:underline">Syarat & Ketentuan</a> serta <a href="#" class="text-brand-500 hover:underline">Kebijakan Refund</a>.</span>
+            </label>
+        </div>
+    </main>
+
+    <!-- STICKY BOTTOM BAR (Mobile First) -->
+    <div class="fixed bottom-0 left-0 w-full bg-dark-800 border-t border-slate-700 p-4 shadow-[0_-10px_20px_rgba(0,0,0,0.5)] z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div>
+                <p class="text-xs text-slate-400 mb-1">Total Pembayaran</p>
+                <p class="text-xl font-bold text-white tabular-nums">Rp 22.000</p>
+            </div>
+            <!-- Tombol Menyebut Aksi, bukan "Submit" -->
+            <button class="bg-brand-500 hover:bg-brand-600 text-white font-semibold py-3 px-8 rounded-xl transition duration-200 min-h-[44px] shadow-lg shadow-brand-500/30">
+                Bayar Rp 22.000
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER (Sesuai Aturan 11) -->
+    <footer class="border-t border-slate-800 bg-dark-900 mt-12 mb-20 md:mb-0 pt-10 pb-8">
+        <div class="max-w-6xl mx-auto px-4 text-center md:text-left">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h4 class="font-display text-lg text-white mb-2">[NAMA_BRAND]</h4>
+                    <p class="text-sm text-slate-400 mb-4 max-w-sm mx-auto md:mx-0">Platform layanan top-up game terpercaya di Indonesia. Proses otomatis 24 jam, aman, dan harga kompetitif.</p>
+                    <p class="text-xs text-slate-500">Website ini bukan afiliasi resmi dari publisher game terkait.</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-medium mb-4">Informasi</h5>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-brand-500">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-brand-500">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-brand-500">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="hover:text-brand-500">Kebijakan Refund</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-medium mb-4">Bantuan</h5>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li>WhatsApp: +62 8xx-xxxx-xxxx</li>
+                        <li>Email: support@[DOMAIN]</li>
+                        <li>Jam Layanan: 08.00 - 22.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+                &copy; 2024 [NAMA_BRAND]. Hak Cipta Dilindungi. Terdaftar di Kominfo / NIB: [NOMOR_IZIN].
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
