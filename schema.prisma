@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id        String    @id @default(uuid())
+  name      String
+  slug      String    @unique
+  isActive  Boolean   @default(true)
+  products  Product[]
+  createdAt DateTime  @default(now())
+}
+
+model Product {
+  id          String    @id @default(uuid())
+  gameId      String
+  game        Game      @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  name        String    // Contoh: 86 Diamonds
+  supplierSku String    // Kode produk dari API Supplier (PENTING)
+  basePrice   Int       // Harga modal (TIDAK BOLEH dikirim ke frontend)
+  margin      Int       // Keuntungan admin
+  isActive    Boolean   @default(true)
+  orderItems  OrderItem[]
+}
+
+model Order {
+  id            String      @id @default(uuid())
+  orderNumber   String      @unique
+  totalAmount   Int
+  status        OrderStatus @default(PENDING)
+  targetAccount String      // Menyimpan UserID & ZoneID
+  createdAt     DateTime    @default(now())
+  items         OrderItem[]
+}
+
+model OrderItem {
+  id          String  @id @default(uuid())
+  orderId     String
+  order       Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product @relation(fields: [productId], references: [id])
+  priceAtBuy  Int     // Mengunci harga saat transaksi terjadi
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  PROCESSING
+  SUCCESS
+  FAILED
+  EXPIRED
+}
